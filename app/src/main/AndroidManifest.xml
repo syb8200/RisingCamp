@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".second_week_practice.MainActivity2"
+                  android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +22,9 @@
         <activity android:name=".first_week.Coupang_category"></activity>
         <activity android:name=".first_week.Starbucks_splash"></activity>
         <activity android:name=".first_week.Starbucks_login"></activity>
+
+        <activity android:name=".second_week_practice.MainActivity"></activity>
+        <activity android:name=".second_week_practice.SecondActivity"></activity>
 
     </application>
 
