@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".second_week_practice.MainActivity2"
+        <activity android:name=".CU_splash"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +26,11 @@
 
         <activity android:name=".second_week_practice.MainActivity"></activity>
         <activity android:name=".second_week_practice.SecondActivity"></activity>
+        <activity android:name=".second_week_practice.MainActivity2"></activity>
+
+        <activity android:name=".CU_bottom_nav"></activity>
+
+
 
     </application>
 

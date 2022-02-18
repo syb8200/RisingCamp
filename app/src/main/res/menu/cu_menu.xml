@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/cu_home"
+        android:enabled="true"
+        android:checked="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cu_bottom_icon_1"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/cu_mycu"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cu_bottom_icon_2"
+        android:title="MY CU" />
+
+    <item
+        android:id="@+id/cu_coupon"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cu_bottom_icon_3"
+        android:title="쿠폰함" />
+
+    <item
+        android:id="@+id/cu_buylist"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/cu_bottom_icon_4"
+        android:title="구매내역" />
+
+</menu>
