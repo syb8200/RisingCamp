@@ -28,7 +28,7 @@
         <activity android:name=".second_week_practice.SecondActivity"></activity>
         <activity android:name=".second_week_practice.MainActivity2"></activity>
 
-        <activity android:name=".CU_bottom_nav"></activity>
+        <activity android:name=".CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
 
 

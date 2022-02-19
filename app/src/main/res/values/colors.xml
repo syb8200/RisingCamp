@@ -13,5 +13,6 @@
     <color name="cu_bottom_icon_checked">#66318B</color>
     <color name="cu_bottom_icon_unchecked">#969696</color>
     <color name="cu_text">#1A1A1A</color>
+    <color name="cu_line">#F2F2F2</color>
 
 </resources>

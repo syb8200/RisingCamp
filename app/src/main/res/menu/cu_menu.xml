@@ -18,6 +18,12 @@
         android:title="MY CU" />
 
     <item
+        android:id="@+id/cu_blank"
+        android:enabled="false"
+        app:showAsAction="ifRoom"
+        android:title="" />
+
+    <item
         android:id="@+id/cu_coupon"
         android:enabled="true"
         app:showAsAction="ifRoom"
