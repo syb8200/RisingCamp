@@ -14,5 +14,10 @@
     <color name="cu_bottom_icon_unchecked">#969696</color>
     <color name="cu_text">#1A1A1A</color>
     <color name="cu_line">#F2F2F2</color>
+    <color name="cu_login_naver">#1DC800</color>
+    <color name="cu_login_kakao">#FFDF00</color>
+    <color name="cu_login_kakao_txt">#3E2300</color>
+    <color name="cu_login_txt">#CDCDCD</color>
+    <color name="cu_login_findid_txt">#A1A1A1</color>
 
 </resources>
