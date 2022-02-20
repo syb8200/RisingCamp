@@ -30,8 +30,6 @@
 
         <activity android:name=".CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
-
-
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
+import androidx.viewpager2.widget.ViewPager2
 import com.example.risingcamp.databinding.ActivityCuBottomNavBinding
 
 class CU_bottom_nav : AppCompatActivity() {
@@ -18,6 +19,7 @@ class CU_bottom_nav : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        //bottom_nav 클릭 리스너 생성
         initNavigationBar()
     }
 
@@ -49,13 +51,6 @@ class CU_bottom_nav : AppCompatActivity() {
             }
             selectedItemId = R.id.cu_home
         }
-    }
-
-
-    private fun changeFragment(fragment: Fragment){
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.cu_container, CU_home_Fragment())
-            .commit()
     }
 
 }
