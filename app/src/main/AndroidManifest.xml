@@ -30,6 +30,12 @@
 
         <activity android:name=".CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_login" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_before_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_selfauth" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_selfauth_check" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_setting" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_onebarcode" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
     </application>
 

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cu_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/cu_selfauth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="본인인증"
+            android:textColor="@color/cu_text"
+            android:textSize="17sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cu_close_btn"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/cu_close_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/cu_selfauth_check_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cu_login_txt"
+        app:layout_constraintTop_toBottomOf="@+id/cu_app_bar" />
+
+    <TextView
+        android:id="@+id/cu_selfauth_check_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/cu_selfauth_tv"
+        android:hint="이름"
+        android:inputType="text"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/cu_text"
+        android:textColorHint="@color/cu_login_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_app_bar" />
+
+    <TextView
+        android:id="@+id/cu_selfauth_check_birth"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/cu_selfauth_tv"
+        android:hint="생년월일(8자리)"
+        android:inputType="number"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/cu_text"
+        android:textColorHint="@color/cu_login_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_check_name" />
+
+    <TextView
+        android:id="@+id/cu_selfauth_check_phone"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/cu_selfauth_tv"
+        android:hint="휴대폰번호(숫자만 입력)"
+        android:inputType="number"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/cu_text"
+        android:textColorHint="@color/cu_login_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_check_birth" />
+
+    <TextView
+        android:id="@+id/cu_selfauth_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:text="본인명의 휴대폰을 가지고 계시지 않은 고객님의 경우\n아이핀 인증을 이용 해주시기 바랍니다."
+        android:textColor="@color/cu_text"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_check_phone" />
+
+    <Button
+        android:id="@+id/cu_selfauth_retry_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/cu_bottom_icon_unchecked"
+        android:text="재전송"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_notice" />
+
+    <EditText
+        android:id="@+id/cu_selfauth_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/cu_login_txt"
+        android:hint="인증번호 입력"
+        android:inputType="number"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/cu_text"
+        android:textColorHint="@color/cu_login_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_retry_btn" />
+
+    <Button
+        android:id="@+id/cu_selfauth_complete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/cu_bottom_icon_checked"
+        android:text="본인 인증"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_selfauth_number" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
