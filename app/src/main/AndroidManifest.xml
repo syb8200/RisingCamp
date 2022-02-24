@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".CU_splash"
+        <activity android:name=".third_week_practice.MainActivity"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:exported="true">
             <intent-filter>
@@ -28,6 +28,7 @@
         <activity android:name=".second_week_practice.SecondActivity"></activity>
         <activity android:name=".second_week_practice.MainActivity2"></activity>
 
+        <activity android:name=".CU_splash" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_login" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_before_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
@@ -36,6 +37,7 @@
         <activity android:name=".CU_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_setting" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_onebarcode" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
 
     </application>
 
