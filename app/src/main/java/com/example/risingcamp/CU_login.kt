@@ -24,7 +24,7 @@ class CU_login: AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        sharedPreferences = getSharedPreferences("login_info", MODE_PRIVATE)
+        sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
 
         //회원가입 텍스트
         binding.cuLoginSignupTxt.setOnClickListener{
@@ -38,46 +38,29 @@ class CU_login: AppCompatActivity() {
             startActivity(intent)
         }
 
-
-
-
-        //입력한 데이터 가져오기 (login_value)
-        val id = binding.cuLoginIdEdt.text.toString()
-        val pwd = binding.cuLoginPwdEdt.text.toString()
-        //val login_value = "login"
-
-        //SharedPreferences.Editor 객체 가져오기, putter로 데이터 저장하기
-        val editor : SharedPreferences.Editor = sharedPreferences.edit()
-        editor.putString("ID", id)
-        editor.putString("PWD", pwd)
-        //editor.putString("Login", login_value)
-
-        //apply로 데이터를 파일에 반영
-        editor.apply()
-
         Log.d("Login", "onCreate")
     }
 
     override fun onRestart() {
         super.onRestart()
 
-        binding.cuLoginIdEdt.text = null
-        binding.cuLoginPwdEdt.text = null
+        val builder2 = AlertDialog.Builder(this)
+
+        builder2.setTitle("보안")
+            .setMessage("보안상의 이유로 초기화됩니다.")
+            .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which->
+            })
+        builder2.show()
+
+        Log.d("Login", "onRestart()")
 
     }
 
     override fun onPause() {
         super.onPause()
 
-        val builder2 = AlertDialog.Builder(this)
-
-            builder2.setTitle("보안")
-                .setMessage("보안상의 이유로 초기화됩니다.")
-                .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which->
-                })
-            builder2.show()
-
-        Log.d("Login", "onPause()")
+        binding.cuLoginIdEdt.text = null
+        binding.cuLoginPwdEdt.text = null
 
     }
 

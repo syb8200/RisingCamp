@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/cu_complete_signup_logo_img"
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/cu_complete_signup_logo_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14" />
+
+    <TextView
+        android:id="@+id/cu_complete_signup_cong_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="가입을 축하합니다."
+        android:textColor="@color/cu_bottom_icon_checked"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_complete_signup_logo_img" />
+
+    <View
+        android:id="@+id/cu_complete_signup_line"
+        android:layout_width="60dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/cu_login_findid_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_complete_signup_cong_txt" />
+
+    <TextView
+        android:id="@+id/cu_complete_signup_mid_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="보유하신 결제수단을 등록하시면\n나만의 결제 바코드를 통해\n보다 빠르고 편리하게\n포켓CU를 이용하실 수 있습니다."
+        android:textColor="@color/cu_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_complete_signup_line" />
+
+    <Button
+        android:id="@+id/cu_complete_signup_card_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/cu_complete_signup_mid_btn"
+        android:drawableLeft="@drawable/cu_complete_signup_card_resize"
+        android:paddingHorizontal="30dp"
+        android:text="신용카드 등록"
+        android:textColor="@color/cu_login_findid_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_complete_signup_mid_txt" />
+
+    <Button
+        android:id="@+id/cu_complete_signup_payco_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/cu_complete_signup_mid_btn"
+        android:drawableLeft="@drawable/cu_complete_signup_payco_resize"
+        android:paddingHorizontal="30dp"
+        android:text="PAYCO 앱 설치"
+        android:textColor="@color/cu_login_findid_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_complete_signup_card_btn" />
+
+    <TextView
+        android:id="@+id/cu_complete_signup_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cu_bottom_icon_checked"
+        android:gravity="center"
+        android:paddingVertical="15dp"
+        android:text="확인"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

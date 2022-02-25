@@ -35,23 +35,24 @@ class CU_selfauth : AppCompatActivity()  {
     override fun onStop() {
         super.onStop()
 
-
         //입력한 데이터 가져오기
         val name = binding.cuSelfauthName.text.toString()
-        val birth = binding.cuSelfauthBirth.text.toString().toInt()
-        val phone = binding.cuSelfauthPhone.text.toString().toInt()
+        val birth = binding.cuSelfauthBirth.text.toString()
+        val phone = binding.cuSelfauthPhone.text.toString()
 
         //SharedPreferences.Editor 객체 가져오기, putter로 데이터 저장하기
         val editor : SharedPreferences.Editor = sharedPreferences.edit()
 
         editor.putString("Name", name)
-        editor.putInt("Birth", birth)
-        editor.putInt("Phone", phone)
+        editor.putString("Birth", birth)
+        editor.putString("Phone", phone)
 
         //apply로 데이터를 파일에 반영
         editor.apply()
 
-        Log.d("SlefAuth", "onStop()")
+        Log.d("SelfAuth", "onStop()")
 
     }
+
+
 }

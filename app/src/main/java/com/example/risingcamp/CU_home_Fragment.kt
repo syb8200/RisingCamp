@@ -34,14 +34,15 @@ class CU_home_Fragment: Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        sharedPreferences = requireContext().getSharedPreferences("user_login", AppCompatActivity.MODE_PRIVATE)
+        sharedPreferences = requireContext().getSharedPreferences("user", AppCompatActivity.MODE_PRIVATE)
 
+        //[데이터 가져오기]
         //getter로 데이터 가져오기
-        val id = sharedPreferences.getString("ID", "ERROR")
-        val pwd = sharedPreferences.getString("PWD", "ERROR")
-        val login_value = sharedPreferences.getString("Login", "ERROR")
+        val name = sharedPreferences.getString("Name", "ERROR")
+        val birth = sharedPreferences.getString("Birth", "ERROR")
+        val phone = sharedPreferences.getString("Phone", "ERROR")
 
-        Log.d("homeFragment", "onCreateView(), Login:$login_value")
+        Log.d("homeFragment", "onCreateView()")
 
         val login_txt = view.findViewById<TextView>(R.id.cu_login_txt)
         val cu_id = view.findViewById<TextView>(R.id.cu_id)
@@ -53,29 +54,6 @@ class CU_home_Fragment: Fragment() {
             startActivity(intent)
         }
 
-
-        if(login_value=="logout" || login_value==null){
-            login_txt.visibility=View.VISIBLE
-            cu_id.visibility=View.INVISIBLE
-            cu_id_nim.visibility=View.INVISIBLE
-            cu_top_barcode.visibility=View.INVISIBLE
-
-        } else if(login_value=="login"){
-            login_txt.visibility=View.INVISIBLE
-            cu_id.visibility=View.INVISIBLE
-            cu_id_nim.visibility=View.INVISIBLE
-            cu_top_barcode.visibility=View.VISIBLE
-
-        }
-
-
-
-        //로그인 해주세요 텍스트 클릭
-        //val login_btn = view.findViewById<TextView>(R.id.cu_login_txt)
-        //login_btn.setOnClickListener{  view ->
-        //    val intent = Intent(activity, CU_login::class.java)
-        //    startActivity(intent)
-        //}
 
         //왼쪽 카테고리 버튼
         val cu_top_category = view.findViewById<ImageView>(R.id.cu_top_category)

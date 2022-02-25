@@ -26,14 +26,13 @@ class CU_selfauth_check : AppCompatActivity() {
 
         //getter로 데이터 가져오기
         val name = sharedPreferences.getString("Name", "ERROR")
-        val birth = sharedPreferences.getInt("Birth", -1)
-        val phone = sharedPreferences.getInt("Phone", -1)
+        val birth = sharedPreferences.getString("Birth", "ERROR")
+        val phone = sharedPreferences.getString("Phone", "ERROR")
 
         //textview에 가져온 데이터 보여주기
         binding.cuSelfauthCheckName.text = name
-        binding.cuSelfauthCheckBirth.text = birth.toString()
-        binding.cuSelfauthCheckPhone.text = phone.toString()
-
+        binding.cuSelfauthCheckBirth.text = birth
+        binding.cuSelfauthCheckPhone.text = phone
 
         binding.cuSelfauthCompleteBtn.setOnClickListener{
             val intent = Intent(this,CU_signup::class.java)
@@ -41,6 +40,15 @@ class CU_selfauth_check : AppCompatActivity() {
         }
 
         Log.d("SelfAuthCheck", "onCreate()")
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        binding.cuSelfauthCheckName.text = null
+        binding.cuSelfauthCheckBirth.text = null
+        binding.cuSelfauthCheckPhone.text = null
 
     }
 }

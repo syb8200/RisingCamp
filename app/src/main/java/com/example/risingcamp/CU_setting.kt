@@ -29,27 +29,33 @@ class CU_setting : AppCompatActivity() {
 
 
 
+        //[데이터 가져오기]
         //getter로 데이터 가져오기
         val name = sharedPreferences.getString("Name", "ERROR")
-        //val id = sharedPreferences.getString("ID", "ERROR")
+        val birth = sharedPreferences.getString("Birth", "ERROR")
+        val phone = sharedPreferences.getString("Phone", "ERROR")
+        val pwd = sharedPreferences.getString("Password", "ERROR")
+
         binding.cuSettingId.text = name
-        //val pwd = sharedPreferences.getString("PWD", "ERROR")
-        //val login_value = sharedPreferences.getString("Login", "ERROR")
-
-        /*
-        if(login_value=="logout"){
-            binding.cuSettingId.text = "로그인 해주세요."
-        } else if(login_value=="login"){
-            binding.cuSettingId.text = id
-        }
-        */
-
 
         binding.cuSettingLogoutBtn.setOnClickListener{
             val builder = AlertDialog.Builder(this)
             builder.setTitle("로그아웃")
                 .setMessage("로그아웃 하시겠습니까?")
                 .setPositiveButton("확인", DialogInterface.OnClickListener{dialog, which ->
+
+                    binding.cuSettingId.text = null
+
+                    val editor : SharedPreferences.Editor = sharedPreferences.edit()
+
+                    editor.putString("Name", null)
+                    editor.putString("Birth", null)
+                    editor.putString("Phone", null)
+                    editor.putString("Password", null)
+
+                    //apply로 데이터를 파일에 반영
+                    editor.apply()
+
                     finish()
 
                 })
@@ -57,26 +63,6 @@ class CU_setting : AppCompatActivity() {
         }
 
     }
-
-    override fun onStop() {
-        super.onStop()
-
-        //val name = null
-        //val birth = 0
-        //val phone = 0
-
-        val editor : SharedPreferences.Editor = sharedPreferences.edit()
-
-        editor.putString("Name", null)
-        editor.putInt("Birth", 0)
-        editor.putInt("Phone", 0)
-
-        //apply로 데이터를 파일에 반영
-        editor.apply()
-
-        //Log.d("Setting", "onDestroy(), ID:$id PWD:$pwd, Login:$login_value")
-    }
-
 
     override fun onDestroy() {
         super.onDestroy()
