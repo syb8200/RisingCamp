@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cu_event_roulette_bottom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CU_event_roulette">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cu_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cu_top_back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/cu_top_back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cu_top_category"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/cu_top_icon_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cu_top_back_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cu_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이벤트 상세"
+            android:textColor="@color/cu_text"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cu_top_barcode"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/cu_top_icon_3"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/cu_event_roulette_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_app_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cu_event_roulette"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cu_app_bar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cu_event_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="25dp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/cu_event_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="2월 포켓CU 출석룰렛 이벤트"
+                    android:textColor="@color/cu_text"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/cu_event_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="2022.02.01~2022.02.28"
+                    android:textColor="@color/cu_bottom_icon_unchecked"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cu_event_detail_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/cu_event_roulette_img_1"
+                android:layout_width="match_parent"
+                android:layout_height="275dp"
+                android:src="@drawable/cu_event_roulette_img_1"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_detail" />
+
+            <ImageView
+                android:id="@+id/cu_event_roulette_img_2"
+                android:layout_width="match_parent"
+                android:layout_height="513dp"
+                android:src="@drawable/cu_event_roulette_img_2"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_img_1" />
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/cu_event_roulette_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_img_2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="누적 참여 횟수"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:paddingVertical="8dp"
+                        android:paddingHorizontal="15dp"
+                        android:text="0일"
+                        android:textStyle="normal"
+                        android:textSize="18sp"
+                        android:textColor="@color/cu_event_roulette_txt"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="누적 획득 포인트"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:paddingVertical="8dp"
+                        android:paddingHorizontal="15dp"
+                        android:text="16P"
+                        android:textStyle="normal"
+                        android:textSize="18sp"
+                        android:textColor="@color/cu_event_roulette_txt"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/cu_event_roulette_cal"
+                android:layout_width="362dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/cu_event_roulette_cal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_bottom" />
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_cal_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingVertical="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_cal">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/cu_event_rooulette_cal_bottom_img"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="당첨되신 포인트는 가용 예정 포인트로\n지급되며 다음날 사용 가능 합니다."
+                    android:textColor="@color/cu_bottom_icon_unchecked"
+                    android:textSize="14sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="10dp"
+                android:paddingHorizontal="15dp"
+                android:background="@color/cu_event_roulette_check"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_cal_bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/cu_event_roulette_check_img" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="꼭 확인해주세요!"
+                    android:textColor="@color/cu_text"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cu_event_roulette_check_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="40dp"
+                android:paddingHorizontal="15dp"
+                android:lineSpacingExtra="6dp"
+                android:background="@color/cu_event_roulette_check"
+                android:text="• 룰렛은 1일 1회 참여 가능합니다.\n   (이벤트 기간 중 최대 28회까지 참여 가능)\n• 룰렛 당첨은 모두 랜덤으로 추첨 지급됩니다.\n• 본 행사는 조기 종료되거나 사전 예고 없이 변경될 수\n   있습니다."
+                android:textColor="@color/cu_bottom_icon_unchecked"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_check" />
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_check_txt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="공유하기"
+                    android:textStyle="normal"
+                    android:textSize="16sp"
+                    android:textColor="@color/cu_text"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/cu_event_roulette_share_1"/>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:src="@drawable/cu_event_roulette_share_2"/>
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/cu_event_roulette_share_3"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="25dp"
+                android:paddingVertical="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_share">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/cu_event_roulette_comment"/>
+
+                <TextView
+                    android:id="@+id/cu_event_roulette_comment_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="4094"
+                    android:textColor="@color/cu_text"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+
+                <ImageView
+                    android:id="@+id/cu_event_roulette_heart_img"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="25dp"
+                    android:src="@drawable/cu_event_roulette_heart"/>
+
+                <TextView
+                    android:id="@+id/cu_event_roulette_heart_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="528"
+                    android:textColor="@color/cu_text"
+                    android:textSize="15sp"
+                    android:textStyle="normal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cu_event_roulette_share_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="25dp"
+                android:paddingBottom="15dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_count">
+
+                <EditText
+                    android:id="@+id/cu_event_roulette_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="top|start"
+                    android:background="@drawable/cu_event_roulette_edt"
+                    android:padding="8dp"
+                    android:maxLines="15"
+                    android:maxLength="100"
+                    android:textStyle="normal"
+                    android:textSize="14sp"
+                    android:textColor="@color/cu_text"
+                    android:hint="댓글을 남겨주세요.\n(최대 100자까지 입력가능)"
+                    android:textColorHint="@color/cu_login_txt"/>
+
+                <Button
+                    android:id="@+id/cu_event_roulette_save_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingVertical="20dp"
+                    android:text="등록"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:backgroundTint="@color/cu_bottom_icon_checked"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/cu_event_roulette_line"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/cu_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_share_bottom"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cu_event_roulette_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_line"
+                tools:listitem="@layout/item_cu_event_roulette" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

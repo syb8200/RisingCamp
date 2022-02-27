@@ -54,6 +54,12 @@ class CU_home_Fragment: Fragment() {
             startActivity(intent)
         }
 
+        //출석룰렛 버튼
+        val cu_event_roulette = view.findViewById<ImageView>(R.id.cu_midscroll_2_img)
+        cu_event_roulette.setOnClickListener{ view->
+            val intent = Intent(activity, CU_event_roulette::class.java)
+            startActivity(intent)
+        }
 
         //왼쪽 카테고리 버튼
         val cu_top_category = view.findViewById<ImageView>(R.id.cu_top_category)

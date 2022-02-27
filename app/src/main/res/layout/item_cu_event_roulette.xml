@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/item_roulette_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:text="아이디(핸드폰번호)"
+        android:textColor="@color/cu_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_roulette_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:text="내용"
+        android:textColor="@color/cu_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_roulette_id" />
+
+    <TextView
+        android:id="@+id/item_roulette_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:visibility="visible"
+        android:text="날짜"
+        android:textColor="@color/cu_login_findid_txt"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_roulette_content" />
+
+    <EditText
+        android:id="@+id/cu_event_roulette_edt"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@drawable/cu_event_roulette_edt"
+        android:gravity="top|start"
+        android:hint="댓글을 남겨주세요.\n(최대 100자까지 입력가능)"
+        android:maxLength="100"
+        android:maxLines="15"
+        android:padding="8dp"
+        android:textColor="@color/cu_text"
+        android:textColorHint="@color/cu_login_txt"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/item_roulette_id" />
+
+    <LinearLayout
+        android:id="@+id/cu_event_roulette_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/cu_event_roulette_edt">
+
+        <Button
+            android:id="@+id/cu_event_roulette_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cu_login_findid_txt"
+            android:text="취소"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <Button
+            android:id="@+id/cu_event_roulette_save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/cu_bottom_icon_checked"
+            android:text="등록"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/item_roulette_edit_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:src="@drawable/item_roulette_edit_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_roulette_line" />
+
+    <View
+        android:id="@+id/item_roulette_line"
+        android:layout_width="1dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginRight="10dp"
+        android:visibility="invisible"
+        android:background="@color/cu_login_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/item_roulette_delete_icon" />
+
+    <ImageView
+        android:id="@+id/item_roulette_delete_icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible"
+        android:src="@drawable/item_roulette_delete_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

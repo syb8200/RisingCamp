@@ -20,5 +20,8 @@
     <color name="cu_login_txt">#CDCDCD</color>
     <color name="cu_login_findid_txt">#A1A1A1</color>
     <color name="cu_signup_user_info">#333333</color>
+    <color name="cu_event_roulette_bottom">#F4E2E2</color>
+    <color name="cu_event_roulette_txt">#DD5B78</color>
+    <color name="cu_event_roulette_check">#EEEEEE</color>
 
 </resources>
