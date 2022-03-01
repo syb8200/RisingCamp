@@ -28,7 +28,6 @@ class CU_setting : AppCompatActivity() {
         sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
 
 
-
         //[데이터 가져오기]
         //getter로 데이터 가져오기
         val name = sharedPreferences.getString("Name", "ERROR")
@@ -38,6 +37,7 @@ class CU_setting : AppCompatActivity() {
 
         binding.cuSettingId.text = name
 
+        //로그아웃
         binding.cuSettingLogoutBtn.setOnClickListener{
             val builder = AlertDialog.Builder(this)
             builder.setTitle("로그아웃")
@@ -60,16 +60,52 @@ class CU_setting : AppCompatActivity() {
 
                 })
             builder.show()
+
+            finishAffinity() //해당 앱의 루트 액티비티를 종료시킨다.
+            System.runFinalization() //현재 작업중인 쓰레드가 다 종료되면, 종료 시키라는 명령어이다.
+            System.exit(0) // 현재 액티비티를 종료시킨다.
+        }
+
+        //회원탈퇴
+        binding.cuSettingManage9.setOnClickListener{
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("회원탈퇴")
+                .setMessage("정말 탈퇴하시겠습니까?")
+                .setNegativeButton("취소", DialogInterface.OnClickListener{dialog, which ->
+                    null
+                })
+                .setPositiveButton("확인", DialogInterface.OnClickListener{dialog, which ->
+
+                    binding.cuSettingId.text = null
+
+                    val editor : SharedPreferences.Editor = sharedPreferences.edit()
+
+                    editor.remove("Name")
+                    editor.remove("Birth")
+                    editor.remove("Phone")
+                    editor.remove("Password")
+
+                    //apply로 데이터를 파일에 반영
+                    editor.apply()
+
+                    binding.cuSettingId.text = "로그인 해주세요."
+
+                })
+            builder.show()
+
+        }
+
+        //회원정보 수정
+        binding.cuSettingManage8.setOnClickListener{
+            val intent = Intent(this, CU_user_update::class.java)
+            startActivity(intent)
         }
 
     }
 
+
     override fun onDestroy() {
         super.onDestroy()
-
-        finishAffinity() //해당 앱의 루트 액티비티를 종료시킨다.
-        System.runFinalization() //현재 작업중인 쓰레드가 다 종료되면, 종료 시키라는 명령어이다.
-        System.exit(0) // 현재 액티비티를 종료시킨다.
 
     }
 

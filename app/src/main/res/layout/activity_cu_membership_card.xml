@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".CU_membership_card">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cu_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cu_top_back_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/cu_top_back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cu_top_category"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/cu_top_icon_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cu_top_back_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cu_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="멤버십 카드 관리"
+            android:textColor="@color/cu_text"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cu_top_barcode"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="13dp"
+            android:src="@drawable/cu_top_icon_3"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cu_membership_card_top"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/cu_line"
+        app:layout_constraintTop_toBottomOf="@+id/cu_app_bar">
+
+        <Button
+            android:id="@+id/cu_membership_card_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:backgroundTint="@color/cu_bottom_icon_checked"
+            android:paddingVertical="20dp"
+            android:text="카드 등록 안내"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/cu_membership_card_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_membership_card_top"
+        tools:listitem="@layout/item_cu_membership_card" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

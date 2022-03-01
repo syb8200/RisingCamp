@@ -121,14 +121,16 @@
             <ImageView
                 android:id="@+id/cu_event_roulette_img_1"
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
                 android:src="@drawable/cu_event_roulette_img_1"
                 app:layout_constraintTop_toBottomOf="@+id/cu_event_detail" />
 
             <ImageView
                 android:id="@+id/cu_event_roulette_img_2"
                 android:layout_width="match_parent"
-                android:layout_height="513dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
                 android:src="@drawable/cu_event_roulette_img_2"
                 app:layout_constraintTop_toBottomOf="@+id/cu_event_roulette_img_1" />
 

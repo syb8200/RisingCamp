@@ -16,7 +16,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager2.widget.ViewPager2
-import com.example.risingcamp.databinding.ActivityCuSettingBinding
 import org.w3c.dom.Text
 
 
@@ -49,6 +48,7 @@ class CU_home_Fragment: Fragment() {
         val cu_id_nim = view.findViewById<TextView>(R.id.cu_id_nim)
         val cu_top_barcode = view.findViewById<ImageView>(R.id.cu_top_barcode)
 
+        //상단 로그인 텍스트
         login_txt.setOnClickListener{ view->
             val intent = Intent(activity, CU_login::class.java)
             startActivity(intent)

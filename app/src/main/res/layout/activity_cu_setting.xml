@@ -254,6 +254,8 @@
 
     </LinearLayout>
 
+
+
     <TextView
         android:id="@+id/cu_setting_permission_txt"
         android:layout_width="match_parent"
@@ -442,6 +444,94 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/cu_setting_gps_txt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cu_setting_user_manage_txt"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/cu_line"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="20dp"
+        android:text="회원 관리"
+        android:textColor="@color/cu_text"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_setting_manage_7" />
+
+    <LinearLayout
+        android:id="@+id/cu_setting_manage_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_setting_user_manage_txt">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cu_setting_user_update_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원정보 수정"
+                android:textColor="@color/cu_text"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cu_setting_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/cu_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_setting_manage_8" />
+
+    <LinearLayout
+        android:id="@+id/cu_setting_manage_9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cu_setting_line6">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/cu_setting_user_out_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원탈퇴"
+                android:textColor="@color/cu_text"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

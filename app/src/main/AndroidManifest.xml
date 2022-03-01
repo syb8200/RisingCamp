@@ -38,6 +38,8 @@
         <activity android:name=".CU_setting" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_onebarcode" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity android:name=".CU_event_roulette" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_membership_card" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".CU_user_update" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
         <activity android:name=".third_week_practice.MainActivity"></activity>
 
