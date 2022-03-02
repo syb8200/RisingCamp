@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".CU_home_Fragment">
+    tools:context=".second_third_week.CU_home_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cu_app_bar"

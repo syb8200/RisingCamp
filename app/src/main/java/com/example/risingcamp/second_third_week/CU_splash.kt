@@ -1,11 +1,11 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.risingcamp.R
 
 class CU_splash : AppCompatActivity() {
 

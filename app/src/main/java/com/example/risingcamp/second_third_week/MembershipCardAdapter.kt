@@ -1,15 +1,11 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.Context
-import android.media.Image
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.risingcamp.databinding.ItemCuMembershipCardBinding
-import com.example.risingcamp.databinding.ItemListviewPractice3Binding
-import com.example.risingcamp.third_week_practice.BusinessCard
+import com.example.risingcamp.R
 
 class MembershipCardAdapter(val context: Context, private val membershipCardArrayList:ArrayList<MembershipCard>): BaseAdapter(){
 

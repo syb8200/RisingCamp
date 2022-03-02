@@ -1,11 +1,9 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
-import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.risingcamp.databinding.ActivityCuSettingBinding

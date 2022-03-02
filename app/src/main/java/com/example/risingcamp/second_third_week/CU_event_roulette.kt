@@ -1,21 +1,14 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.DialogInterface
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
-import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.risingcamp.databinding.ActivityCuEventRouletteBinding
-import com.example.risingcamp.third_week_practice.BusinessCard
-import com.example.risingcamp.third_week_practice.CustomAdapter
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList

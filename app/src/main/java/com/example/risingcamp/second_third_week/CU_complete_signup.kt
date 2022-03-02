@@ -1,8 +1,7 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.risingcamp.databinding.ActivityCuCompleteSignupBinding
 
@@ -19,7 +18,7 @@ class CU_complete_signup : AppCompatActivity() {
         setContentView(view)
 
         binding.cuCompleteSignupOk.setOnClickListener{
-            val intent = Intent(this,CU_login::class.java)
+            val intent = Intent(this, CU_login::class.java)
             startActivity(intent)
         }
 

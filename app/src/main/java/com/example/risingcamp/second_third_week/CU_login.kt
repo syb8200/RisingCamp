@@ -1,4 +1,4 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.DialogInterface
 import android.content.Intent

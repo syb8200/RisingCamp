@@ -1,18 +1,13 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
-import android.content.Context
 import android.content.DialogInterface
-import android.media.Image
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
-import com.example.risingcamp.third_week_practice.BusinessCard
-import kotlin.coroutines.coroutineContext
+import com.example.risingcamp.R
 
 class RouletteCommentAdapter(private val rouletteCommentArrayList:ArrayList<RouletteComment>): RecyclerView.Adapter<RouletteCommentAdapter.CustomViewHolder>() {
 
@@ -21,7 +16,7 @@ class RouletteCommentAdapter(private val rouletteCommentArrayList:ArrayList<Roul
     //lateinit var binding: ItemCuEventRouletteBinding
 
     //뷰 홀더가 처음 생성될 때
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RouletteCommentAdapter.CustomViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_cu_event_roulette, parent, false)
         return CustomViewHolder(view).apply {
             itemView.setOnClickListener{
@@ -48,7 +43,7 @@ class RouletteCommentAdapter(private val rouletteCommentArrayList:ArrayList<Roul
     override fun getItemCount(): Int = rouletteCommentArrayList.size
 
     //재활용해주는 곳 및 값을 넣어주는 곳
-    override fun onBindViewHolder(holder: RouletteCommentAdapter.CustomViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: CustomViewHolder, position: Int) {
         holder.item_id.text = rouletteCommentArrayList.get(position).id
         holder.item_content.text = rouletteCommentArrayList.get(position).content
         holder.item_date.text = rouletteCommentArrayList.get(position).date

@@ -1,4 +1,4 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -35,7 +35,7 @@ class CU_selfauth_check : AppCompatActivity() {
         binding.cuSelfauthCheckPhone.text = phone
 
         binding.cuSelfauthCompleteBtn.setOnClickListener{
-            val intent = Intent(this,CU_signup::class.java)
+            val intent = Intent(this, CU_signup::class.java)
             startActivity(intent)
         }
 

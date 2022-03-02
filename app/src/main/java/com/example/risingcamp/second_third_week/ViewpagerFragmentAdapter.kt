@@ -1,4 +1,4 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

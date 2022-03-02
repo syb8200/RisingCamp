@@ -1,17 +1,10 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import com.example.risingcamp.R
 import com.example.risingcamp.databinding.ActivityCuMembershipCardBinding
-import com.example.risingcamp.third_week_practice.BusinessCard
-import com.example.risingcamp.third_week_practice.CustomAdapter
 
 //카드 이미지와 카드 이름을 담을 그릇 만들기
 data class MembershipCard(val img: Int, val name:String, var isSwitched:Boolean=false)

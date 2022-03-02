@@ -1,19 +1,16 @@
-package com.example.risingcamp
+package com.example.risingcamp.second_third_week
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.risingcamp.databinding.ActivityCuSettingUserUpdateBinding
 import com.example.risingcamp.databinding.ActivityCuSignupBinding
 
-class CU_user_update : AppCompatActivity() {
+class CU_signup : AppCompatActivity() {
 
     //뷰 바인딩
-    private lateinit var binding: ActivityCuSettingUserUpdateBinding
+    private lateinit var binding: ActivityCuSignupBinding
 
     //sharedpreferences
     private lateinit var sharedPreferences : SharedPreferences
@@ -21,7 +18,7 @@ class CU_user_update : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityCuSettingUserUpdateBinding.inflate(layoutInflater)
+        binding = ActivityCuSignupBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
@@ -42,7 +39,7 @@ class CU_user_update : AppCompatActivity() {
         binding.cuSignupId.text = phone
 
         binding.cuSignupCompleteBtn.setOnClickListener{
-            val intent = Intent(this, CU_setting::class.java)
+            val intent = Intent(this, CU_complete_signup::class.java)
 /*
             if(binding.cuSignupPwd!=binding.cuSignupPwdCheck){
                 val builder = AlertDialog.Builder(this)
@@ -56,7 +53,7 @@ class CU_user_update : AppCompatActivity() {
             startActivity(intent)
         }
 
-        Log.d("User_Update", "onCreate()")
+        Log.d("Signup", "onCreate()")
 
     }
 
