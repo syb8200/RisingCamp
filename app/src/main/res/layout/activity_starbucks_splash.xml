@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#109F4F"
-    tools:context=".first_week.Starbucks_login">
+    tools:context=".week1_hw.Starbucks_login">
 
     <ImageView
         android:id="@+id/logo_img"

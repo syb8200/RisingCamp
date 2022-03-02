@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".second_third_week.CU_splash"
+        <activity android:name=".week3_hw.CU_splash"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:exported="true">
             <intent-filter>
@@ -20,28 +20,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".first_week.Coupang_category"></activity>
-        <activity android:name=".first_week.Starbucks_splash"></activity>
-        <activity android:name=".first_week.Starbucks_login"></activity>
+        <activity android:name=".week1_hw.Coupang_category"></activity>
+        <activity android:name=".week1_hw.Starbucks_splash"></activity>
+        <activity android:name=".week1_hw.Starbucks_login"></activity>
 
-        <activity android:name=".second_week_practice.MainActivity"></activity>
-        <activity android:name=".second_week_practice.SecondActivity"></activity>
-        <activity android:name=".second_week_practice.MainActivity2"></activity>
+        <activity android:name=".week2_pt.MainActivity"></activity>
+        <activity android:name=".week2_pt.SecondActivity"></activity>
+        <activity android:name=".week2_pt.MainActivity2"></activity>
 
-        <activity android:name=".second_third_week.CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_login" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_before_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_selfauth" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_selfauth_check" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_complete_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_setting" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_onebarcode" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_event_roulette" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_membership_card" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <activity android:name=".second_third_week.CU_user_update" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_login" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_before_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_selfauth" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_selfauth_check" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_complete_signup" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_setting" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_onebarcode" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_event_roulette" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_membership_card" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week3_hw.CU_user_update" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
-        <activity android:name=".third_week_practice.MainActivity"></activity>
+        <activity android:name=".week3_pt.MainActivity"></activity>
 
 
     </application>

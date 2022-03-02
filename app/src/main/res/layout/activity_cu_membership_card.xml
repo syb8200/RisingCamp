@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    tools:context=".second_third_week.CU_membership_card">
+    tools:context=".week3_hw.CU_membership_card">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cu_app_bar"
