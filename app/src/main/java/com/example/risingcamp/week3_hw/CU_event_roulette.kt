@@ -102,10 +102,6 @@ class CU_event_roulette : AppCompatActivity() {
                     rouletteCommentArrayList.add(RouletteComment("010********", binding.cuEventRouletteEdt.text.toString(), str_date))
 
                     binding.cuEventRouletteListview.adapter = RouletteCommentAdapter(rouletteCommentArrayList)
-
-                    val comment_count = binding.cuEventRouletteCommentCount.text.toString()
-                    val add_comment_count : Int = comment_count.toInt() +1
-                    binding.cuEventRouletteCommentCount.text = add_comment_count.toString()
                     Log.d(this.toString(),"아이템 추가 완료")
 
                     binding.cuEventRouletteEdt.text.clear()
