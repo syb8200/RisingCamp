@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".week4_pt.MainActivity2"
+        <activity android:name=".week4_hw.TacoFirst"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:exported="true">
             <intent-filter>
@@ -45,6 +45,9 @@
         <activity android:name=".week3_pt.MainActivity"></activity>
 
         <activity android:name=".week4_pt.MainActivity"></activity>
+        <activity android:name=".week4_pt.MainActivity2"></activity>
+
+        <activity android:name=".week4_hw.TacoMain" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
 
     </application>

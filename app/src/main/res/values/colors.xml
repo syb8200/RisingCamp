@@ -24,4 +24,7 @@
     <color name="cu_event_roulette_txt">#DD5B78</color>
     <color name="cu_event_roulette_check">#EEEEEE</color>
 
+    <color name="taco_main_bg">#FF999A</color>
+    <color name="taco_desk_bottom">#F09E38</color>
+
 </resources>

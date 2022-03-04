@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/taco_main_bg">
+
+    <ImageView
+        android:id="@+id/taco_desk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_desk"
+        app:layout_constraintBottom_toTopOf="@+id/taco_desk_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/taco_desk_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/taco_desk_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/taco_man"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_man_normal"
+        app:layout_constraintBottom_toTopOf="@+id/taco_desk"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/taco_bottom_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taco_desk">
+
+        <ImageView
+            android:id="@+id/taco_bottom_1_unchecked_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/taco_bottom_1_unchecked_btn" />
+
+        <ImageView
+            android:id="@+id/taco_bottom_2_unchecked_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/taco_bottom_2_unchecked_btn" />
+
+        <ImageView
+            android:id="@+id/taco_bottom_3_unchecked_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/taco_bottom_3_unchecked_btn" />
+
+        <ImageView
+            android:id="@+id/taco_bottom_4_unchecked_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/taco_bottom_4_unchecked_btn" />
+
+        <ImageView
+            android:id="@+id/taco_bottom_5_unchecked_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/taco_bottom_5_unchecked_btn" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/taco_score_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/taco_score_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dosgothic"
+            android:text="SCORE"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/taco_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dosgothic"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="65sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/taco_time_space"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/taco_time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dosgothic"
+            android:text="TIME"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/taco_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dosgothic"
+            android:text="200"
+            android:textColor="@color/black"
+            android:textSize="65sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--1번째 줄-->
+    <ImageView
+        android:id="@+id/taco_no_1"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_1"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="49dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_2"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_1"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_2"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="13dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_1"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_1"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_3"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_2"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_3"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="13dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_2"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_2"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_4"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_3"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_4"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="13dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_3"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_3"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <!--2번째 줄-->
+    <ImageView
+        android:id="@+id/taco_no_5"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_5"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="49dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_6"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_5"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_6"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_5"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_6"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_5"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_7"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_6"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_7"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_6"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_7"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_6"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_8"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_7"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_8"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="59dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_7"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_8"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_7"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <!--3번째 줄-->
+    <ImageView
+        android:id="@+id/taco_no_9"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_9"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="49dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_9"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginLeft="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_10"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_9"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_10"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_9"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_10"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_9"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_11"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_10"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_11"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_10"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_11"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_10"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_12"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_11"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_12"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_11"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_12"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_11"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <!--4번째 줄-->
+    <ImageView
+        android:id="@+id/taco_no_13"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_13"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="49dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_13"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_marginLeft="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_14"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_13"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_14"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_13"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_14"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_13"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_15"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_14"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_15"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_14"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_15"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_14"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <ImageView
+        android:id="@+id/taco_no_16"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_state_1"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_15"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+    <ImageView
+        android:id="@+id/taco_ball_no_16"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:src="@drawable/taco_r1"
+        android:layout_marginTop="151dp"
+        android:layout_marginLeft="14dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_15"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+    <ImageView
+        android:id="@+id/taco_tool_kettle_no_16"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_marginLeft="45dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_kettle"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/taco_no_15"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk"/>
+
+
+    <!--도마-->
+    <ImageView
+        android:id="@+id/taco_tool_hand"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="117dp"
+        android:layout_marginRight="30dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_hand"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+
+    <ImageView
+        android:id="@+id/taco_doma"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="76dp"
+        android:layout_marginRight="7dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_doma"
+        app:layout_constraintBottom_toTopOf="@+id/taco_desk_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/taco_desk" />
+
+
+    <!--도마 1번째 줄-->
+    <ImageView
+        android:id="@+id/taco_doma_r1"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r1"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/taco_doma_r2"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!--도마 2번째 줄-->
+    <ImageView
+        android:id="@+id/taco_doma_r3"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="28dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/taco_doma_r4"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r4"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!--도마 3번째 줄-->
+    <ImageView
+        android:id="@+id/taco_doma_r5"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="52dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r5"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/taco_doma_r6"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r6"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r6"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!--도마 3번째 줄-->
+    <ImageView
+        android:id="@+id/taco_doma_r7"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r7"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="47dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r7"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/taco_doma_r8"
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="77dp"
+        android:src="@drawable/taco_r2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/taco_doma"
+        app:layout_constraintTop_toTopOf="@+id/taco_doma" />
+    <ImageView
+        android:id="@+id/taco_tool_brush_r8"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/taco_tool_brush"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/taco_doma_r8"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
