@@ -26,5 +26,6 @@
 
     <color name="taco_main_bg">#FF999A</color>
     <color name="taco_desk_bottom">#F09E38</color>
+    <color name="taco_game_over">#EB3223</color>
 
 </resources>
