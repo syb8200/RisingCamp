@@ -17,7 +17,7 @@ class TacoMain : AppCompatActivity() {
     private lateinit var binding : ActivityTacoMainBinding
 
     //[Thread]
-    //TimerThread, TacoNo(1~8)Thread, ScoreThread
+    //TimerThread, TacoNo(1~16)Thread, ScoreThread
     private var timerThread : TimerThread? = null
     private var tacoNo1Thread : TacoNo1Thread? = null
     private var tacoNo2Thread : TacoNo2Thread? = null
@@ -27,6 +27,14 @@ class TacoMain : AppCompatActivity() {
     private var tacoNo6Thread : TacoNo6Thread? = null
     private var tacoNo7Thread : TacoNo7Thread? = null
     private var tacoNo8Thread : TacoNo8Thread? = null
+    private var tacoNo9Thread : TacoNo9Thread? = null
+    private var tacoNo10Thread : TacoNo10Thread? = null
+    private var tacoNo11Thread : TacoNo11Thread? = null
+    private var tacoNo12Thread : TacoNo12Thread? = null
+    private var tacoNo13Thread : TacoNo13Thread? = null
+    private var tacoNo14Thread : TacoNo14Thread? = null
+    private var tacoNo15Thread : TacoNo15Thread? = null
+    private var tacoNo16Thread : TacoNo16Thread? = null
     private var scoreThread : ScoreThread? = null
 
     //[Handler]
@@ -47,6 +55,15 @@ class TacoMain : AppCompatActivity() {
     var count7 = 0
     var count8 = 0
 
+    var count9 = 0
+    var count10 = 0
+    var count11 = 0
+    var count12 = 0
+    var count13 = 0
+    var count14 = 0
+    var count15 = 0
+    var count16 = 0
+
     var state1 = false
     var state2 = false
     var state3 = false
@@ -55,6 +72,15 @@ class TacoMain : AppCompatActivity() {
     var state6 = false
     var state7 = false
     var state8 = false
+
+    var state9 = false
+    var state10 = false
+    var state11 = false
+    var state12 = false
+    var state13 = false
+    var state14 = false
+    var state15 = false
+    var state16 = false
 
     //TacoStateHandler
     val NO_1 = 5
@@ -102,6 +128,7 @@ class TacoMain : AppCompatActivity() {
                     binding.tacoBottom5UncheckedBtn.setImageResource(R.drawable.taco_bottom_5_unchecked_btn)
 
                     binding.tacoToolHand.setImageResource(0)
+                    binding.tacoMan.setImageResource(R.drawable.taco_man_normal)
                 }
                 Log.d("하단 버튼1", "state: $state 선택됨")
             }
@@ -130,6 +157,9 @@ class TacoMain : AppCompatActivity() {
                     binding.tacoBottom3UncheckedBtn.setImageResource(R.drawable.taco_bottom_3_checked_btn)
                     binding.tacoBottom4UncheckedBtn.setImageResource(R.drawable.taco_bottom_4_unchecked_btn)
                     binding.tacoBottom5UncheckedBtn.setImageResource(R.drawable.taco_bottom_5_unchecked_btn)
+
+                    binding.tacoToolHand.setImageResource(0)
+                    binding.tacoMan.setImageResource(R.drawable.taco_man_normal)
                 }
                 Log.d("하단 버튼3", "선택됨")
             }
@@ -226,6 +256,55 @@ class TacoMain : AppCompatActivity() {
             }
         })
 
+        binding.no9.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo9Thread = TacoNo9Thread()
+                tacoNo9Thread!!.start()
+            }
+        })
+        binding.no10.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo10Thread = TacoNo10Thread()
+                tacoNo10Thread!!.start()
+            }
+        })
+        binding.no11.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo11Thread = TacoNo11Thread()
+                tacoNo11Thread!!.start()
+            }
+        })
+        binding.no12.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo12Thread = TacoNo12Thread()
+                tacoNo12Thread!!.start()
+            }
+        })
+        binding.no13.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo13Thread = TacoNo13Thread()
+                tacoNo13Thread!!.start()
+            }
+        })
+        binding.no14.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo14Thread = TacoNo14Thread()
+                tacoNo14Thread!!.start()
+            }
+        })
+        binding.no15.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tacoNo15Thread = TacoNo15Thread()
+                tacoNo15Thread!!.start()
+            }
+        })
+        binding.no16.setOnClickListener(object: View.OnClickListener {
+            override fun onClick(p0: View?) {
+                tacoNo16Thread = TacoNo16Thread()
+                tacoNo16Thread!!.start()
+            }
+        })
+
 /*--------------------------------------------------------------------------------------------------*/
         //Taco볼 1~16
         binding.tacoBallNo1.setOnClickListener(object: View.OnClickListener{
@@ -292,6 +371,72 @@ class TacoMain : AppCompatActivity() {
                 tacoNo8Thread!!.start()
             }
         })
+
+        binding.tacoBallNo9.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo9.startAnimation(tb_animation)
+                tacoNo9Thread = TacoNo9Thread()
+                tacoNo9Thread!!.start()
+            }
+        })
+        binding.tacoBallNo10.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo10.startAnimation(tb_animation)
+                tacoNo10Thread = TacoNo10Thread()
+                tacoNo10Thread!!.start()
+            }
+        })
+        binding.tacoBallNo11.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo11.startAnimation(tb_animation)
+                tacoNo11Thread = TacoNo11Thread()
+                tacoNo11Thread!!.start()
+            }
+        })
+        binding.tacoBallNo12.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo12.startAnimation(tb_animation)
+                tacoNo12Thread = TacoNo12Thread()
+                tacoNo12Thread!!.start()
+            }
+        })
+        binding.tacoBallNo13.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo13.startAnimation(tb_animation)
+                tacoNo13Thread = TacoNo13Thread()
+                tacoNo13Thread!!.start()
+            }
+        })
+        binding.tacoBallNo14.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo14.startAnimation(tb_animation)
+                tacoNo14Thread = TacoNo14Thread()
+                tacoNo14Thread!!.start()
+            }
+        })
+        binding.tacoBallNo15.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo15.startAnimation(tb_animation)
+                tacoNo15Thread = TacoNo15Thread()
+                tacoNo15Thread!!.start()
+            }
+        })
+        binding.tacoBallNo16.setOnClickListener(object: View.OnClickListener{
+            override fun onClick(p0: View?) {
+                tb_click = true
+                binding.tacoBallNo16.startAnimation(tb_animation)
+                tacoNo16Thread = TacoNo16Thread()
+                tacoNo16Thread!!.start()
+            }
+        })
+
 /*--------------------------------------------------------------------------------------------------*/
         //도마 타코알
         binding.tacoDomaR1.setOnClickListener(object: View.OnClickListener{
@@ -460,6 +605,62 @@ class TacoMain : AppCompatActivity() {
                             }
                             Log.d("타코타임", "total: $total, count8:$count8")
                         }
+                        if(th_click == true && count9 >= 0){
+                            count9++
+                            if(count9==45){
+                                count9 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count9:$count9")
+                        }
+                        if(th_click == true && count10 >= 0){
+                            count10++
+                            if(count10==45){
+                                count10 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count10:$count10")
+                        }
+                        if(th_click == true && count11 >= 0){
+                            count11++
+                            if(count11==45){
+                                count11 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count11:$count11")
+                        }
+                        if(th_click == true && count12 >= 0){
+                            count12++
+                            if(count12==45){
+                                count12 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count12:$count12")
+                        }
+                        if(th_click == true && count13 >= 0){
+                            count13++
+                            if(count13==45){
+                                count13 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count13:$count13")
+                        }
+                        if(th_click == true && count14 >= 0){
+                            count14++
+                            if(count14==45){
+                                count14 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count14:$count14")
+                        }
+                        if(th_click == true && count15 >= 0){
+                            count15++
+                            if(count15==45){
+                                count15 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count15:$count15")
+                        }
+                        if(th_click == true && count16 >= 0){
+                            count16++
+                            if(count16==45){
+                                count16 = -1
+                            }
+                            Log.d("타코타임", "total: $total, count16:$count16")
+                        }
 
                         val msg2 = Message()
                         msg2.what = TACO_MAN_ANGRY
@@ -522,7 +723,16 @@ class TacoMain : AppCompatActivity() {
                             if(count < 25){
                                 state1 = false
                                 binding.tacoBallNo1.setImageResource(R.drawable.taco_r1)
-                            } else if(count >= 25 && count < 35){
+
+                                if(count >= 35) {
+                                    state1 = false
+                                    binding.tacoBallNo1.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo1.setOnClickListener {
+                                        binding.tacoBallNo1.setImageResource(0)
+                                    }
+                                }
+                            }
+                            else if(count >= 25 && count < 35){
                                 state1 = true
                                 binding.tacoBallNo1.setImageResource(R.drawable.taco_r2)
                                 binding.tacoBallNo1.setOnClickListener{
@@ -530,9 +740,16 @@ class TacoMain : AppCompatActivity() {
                                     binding.tacoBallNo1.setImageResource(0)
                                     binding.tacoDomaR1.setImageResource(R.drawable.taco_r2)
                                 }
+                                if(count >= 35) {
+                                    state1 = false
+                                    binding.tacoBallNo1.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo1.setOnClickListener {
+                                        binding.tacoBallNo1.setImageResource(0)
+                                    }
+                                }
                             }
                             //탔을 때
-                            else if (count > 35){
+                            else if (count >= 35){
                                 state1 = false
                                 binding.tacoBallNo1.setImageResource(R.drawable.taco_r4)
                                 binding.tacoBallNo1.setOnClickListener{
@@ -614,6 +831,14 @@ class TacoMain : AppCompatActivity() {
                             if(count2 < 25){
                                 state2 = false
                                 binding.tacoBallNo2.setImageResource(R.drawable.taco_r1)
+
+                                if(count2 >= 35) {
+                                    state2 = false
+                                    binding.tacoBallNo2.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo2.setOnClickListener {
+                                        binding.tacoBallNo2.setImageResource(0)
+                                    }
+                                }
                             } else if(count2 >= 25 && count2 < 35){
                                 state2 = true
                                 binding.tacoBallNo2.setImageResource(R.drawable.taco_r2)
@@ -621,6 +846,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo2.setImageResource(0)
                                     binding.tacoDomaR2.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count2 >= 35) {
+                                    state2 = false
+                                    binding.tacoBallNo2.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo2.setOnClickListener {
+                                        binding.tacoBallNo2.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -706,6 +938,14 @@ class TacoMain : AppCompatActivity() {
                             if(count3 < 25){
                                 state3 = false
                                 binding.tacoBallNo3.setImageResource(R.drawable.taco_r1)
+
+                                if(count3 >= 35) {
+                                    state3 = false
+                                    binding.tacoBallNo3.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo3.setOnClickListener {
+                                        binding.tacoBallNo3.setImageResource(0)
+                                    }
+                                }
                             } else if(count3 >= 25 && count3 < 35){
                                 state3 = true
                                 binding.tacoBallNo3.setImageResource(R.drawable.taco_r2)
@@ -713,6 +953,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo3.setImageResource(0)
                                     binding.tacoDomaR3.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count3 >= 35) {
+                                    state3 = false
+                                    binding.tacoBallNo3.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo3.setOnClickListener {
+                                        binding.tacoBallNo3.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -798,6 +1045,14 @@ class TacoMain : AppCompatActivity() {
                             if(count4 < 25){
                                 state4 = false
                                 binding.tacoBallNo4.setImageResource(R.drawable.taco_r1)
+
+                                if(count4 >= 35) {
+                                    state4 = false
+                                    binding.tacoBallNo4.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo4.setOnClickListener {
+                                        binding.tacoBallNo4.setImageResource(0)
+                                    }
+                                }
                             } else if(count4 >= 25 && count4 < 35){
                                 state4 = true
                                 binding.tacoBallNo4.setImageResource(R.drawable.taco_r2)
@@ -805,6 +1060,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo4.setImageResource(0)
                                     binding.tacoDomaR4.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count4 >= 35) {
+                                    state4 = false
+                                    binding.tacoBallNo4.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo4.setOnClickListener {
+                                        binding.tacoBallNo4.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -890,6 +1152,14 @@ class TacoMain : AppCompatActivity() {
                             if(count5 < 25){
                                 state5 = false
                                 binding.tacoBallNo5.setImageResource(R.drawable.taco_r1)
+
+                                if(count5 >= 35) {
+                                    state5 = false
+                                    binding.tacoBallNo5.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo5.setOnClickListener {
+                                        binding.tacoBallNo5.setImageResource(0)
+                                    }
+                                }
                             } else if(count5 >= 25 && count5 < 35){
                                 state5 = true
                                 binding.tacoBallNo5.setImageResource(R.drawable.taco_r2)
@@ -897,6 +1167,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo5.setImageResource(0)
                                     binding.tacoDomaR5.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count5 >= 35) {
+                                    state5 = false
+                                    binding.tacoBallNo5.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo5.setOnClickListener {
+                                        binding.tacoBallNo5.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -983,6 +1260,14 @@ class TacoMain : AppCompatActivity() {
                             if(count6 < 25){
                                 state6 = false
                                 binding.tacoBallNo6.setImageResource(R.drawable.taco_r1)
+
+                                if(count6 >= 35) {
+                                    state6 = false
+                                    binding.tacoBallNo6.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo6.setOnClickListener {
+                                        binding.tacoBallNo6.setImageResource(0)
+                                    }
+                                }
                             } else if(count6 >= 25 && count6 < 35){
                                 state6 = true
                                 binding.tacoBallNo6.setImageResource(R.drawable.taco_r2)
@@ -990,6 +1275,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo6.setImageResource(0)
                                     binding.tacoDomaR6.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count6 >= 35) {
+                                    state6 = false
+                                    binding.tacoBallNo6.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo6.setOnClickListener {
+                                        binding.tacoBallNo6.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -1076,6 +1368,14 @@ class TacoMain : AppCompatActivity() {
                             if(count7 < 25){
                                 state7 = false
                                 binding.tacoBallNo7.setImageResource(R.drawable.taco_r1)
+
+                                if(count7 >= 35) {
+                                    state7 = false
+                                    binding.tacoBallNo7.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo7.setOnClickListener {
+                                        binding.tacoBallNo7.setImageResource(0)
+                                    }
+                                }
                             } else if(count7 >= 25 && count7 < 35){
                                 state7 = true
                                 binding.tacoBallNo7.setImageResource(R.drawable.taco_r2)
@@ -1083,6 +1383,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo7.setImageResource(0)
                                     binding.tacoDomaR7.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count7 >= 35) {
+                                    state7 = false
+                                    binding.tacoBallNo7.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo7.setOnClickListener {
+                                        binding.tacoBallNo7.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -1168,6 +1475,14 @@ class TacoMain : AppCompatActivity() {
                             if(count8 < 25){
                                 state8 = false
                                 binding.tacoBallNo8.setImageResource(R.drawable.taco_r1)
+
+                                if(count8 >= 35) {
+                                    state8 = false
+                                    binding.tacoBallNo8.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo8.setOnClickListener {
+                                        binding.tacoBallNo8.setImageResource(0)
+                                    }
+                                }
                             } else if(count8 >= 25 && count8 < 35){
                                 state8 = true
                                 binding.tacoBallNo8.setImageResource(R.drawable.taco_r2)
@@ -1175,6 +1490,13 @@ class TacoMain : AppCompatActivity() {
                                     //익은 타코 도마로 이동
                                     binding.tacoBallNo8.setImageResource(0)
                                     binding.tacoDomaR8.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count8 >= 35) {
+                                    state8 = false
+                                    binding.tacoBallNo8.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo8.setOnClickListener {
+                                        binding.tacoBallNo8.setImageResource(0)
+                                    }
                                 }
                             }
                             //탔을 때
@@ -1230,6 +1552,862 @@ class TacoMain : AppCompatActivity() {
         }
     }
 
+    //TacoNo9Handler
+    private val tacoNo9_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no9.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍9", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no9.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍9", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no9.setBackgroundResource(0)
+                        binding.tacoBallNo9.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍9", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count9 < 25){
+                                state9 = false
+                                binding.tacoBallNo9.setImageResource(R.drawable.taco_r1)
+
+                                if(count9 >= 35) {
+                                    state9 = false
+                                    binding.tacoBallNo9.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo9.setOnClickListener {
+                                        binding.tacoBallNo9.setImageResource(0)
+                                    }
+                                }
+                            } else if(count9 >= 25 && count9 < 35){
+                                state9 = true
+                                binding.tacoBallNo9.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo9.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo9.setImageResource(0)
+                                    binding.tacoDomaR1.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count9 >= 35) {
+                                    state9 = false
+                                    binding.tacoBallNo9.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo9.setOnClickListener {
+                                        binding.tacoBallNo9.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count9 >= 35){
+                                state9 = false
+                                binding.tacoBallNo9.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo9.setOnClickListener{
+                                    binding.tacoBallNo9.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state9 == sc_check){
+                            binding.tacoDomaR1.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR1.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state9:$state9")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo9Thread
+    inner class TacoNo9Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo9_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo9_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo9_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo9_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo10Handler
+    private val tacoNo10_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no10.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍10", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no10.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍10", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no10.setBackgroundResource(0)
+                        binding.tacoBallNo10.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍10", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count10 < 25){
+                                state10 = false
+                                binding.tacoBallNo10.setImageResource(R.drawable.taco_r1)
+
+                                if(count10 >= 35) {
+                                    state10 = false
+                                    binding.tacoBallNo10.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo10.setOnClickListener {
+                                        binding.tacoBallNo10.setImageResource(0)
+                                    }
+                                }
+                            } else if(count10 >= 25 && count10 < 35){
+                                state10 = true
+                                binding.tacoBallNo10.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo10.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo10.setImageResource(0)
+                                    binding.tacoDomaR2.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count10 >= 35) {
+                                    state10 = false
+                                    binding.tacoBallNo10.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo10.setOnClickListener {
+                                        binding.tacoBallNo10.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count10 >= 35){
+                                state10 = false
+                                binding.tacoBallNo10.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo10.setOnClickListener{
+                                    binding.tacoBallNo10.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state10 == sc_check){
+                            binding.tacoDomaR2.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR2.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state10:$state10")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo10Thread
+    inner class TacoNo10Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo10_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo10_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo10_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo10_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo11Handler
+    private val tacoNo11_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no11.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍11", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no11.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍11", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no11.setBackgroundResource(0)
+                        binding.tacoBallNo11.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍11", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count11 < 25){
+                                state11 = false
+                                binding.tacoBallNo11.setImageResource(R.drawable.taco_r1)
+
+                                if(count11 >= 35) {
+                                    state11 = false
+                                    binding.tacoBallNo11.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo11.setOnClickListener {
+                                        binding.tacoBallNo11.setImageResource(0)
+                                    }
+                                }
+                            } else if(count11 >= 25 && count11 < 35){
+                                state11 = true
+                                binding.tacoBallNo11.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo11.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo11.setImageResource(0)
+                                    binding.tacoDomaR3.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count11 >= 35) {
+                                    state11 = false
+                                    binding.tacoBallNo11.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo11.setOnClickListener {
+                                        binding.tacoBallNo11.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count11 >= 35){
+                                state11 = false
+                                binding.tacoBallNo11.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo11.setOnClickListener{
+                                    binding.tacoBallNo11.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state11 == sc_check){
+                            binding.tacoDomaR3.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR3.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state11:$state11")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo11Thread
+    inner class TacoNo11Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo11_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo11_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo11_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo11_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo12Handler
+    private val tacoNo12_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no12.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍12", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no12.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍12", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no12.setBackgroundResource(0)
+                        binding.tacoBallNo12.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍12", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count12 < 25){
+                                state12 = false
+                                binding.tacoBallNo12.setImageResource(R.drawable.taco_r1)
+
+                                if(count12 >= 35) {
+                                    state12 = false
+                                    binding.tacoBallNo12.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo12.setOnClickListener {
+                                        binding.tacoBallNo12.setImageResource(0)
+                                    }
+                                }
+                            } else if(count12 >= 25 && count12 < 35){
+                                state12 = true
+                                binding.tacoBallNo12.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo12.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo12.setImageResource(0)
+                                    binding.tacoDomaR4.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count12 >= 35) {
+                                    state12 = false
+                                    binding.tacoBallNo12.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo12.setOnClickListener {
+                                        binding.tacoBallNo12.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count12 >= 35){
+                                state12 = false
+                                binding.tacoBallNo12.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo12.setOnClickListener{
+                                    binding.tacoBallNo12.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state12 == sc_check){
+                            binding.tacoDomaR4.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR4.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state12:$state12")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo12Thread
+    inner class TacoNo12Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo12_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo12_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo12_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo12_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo13Handler
+    private val tacoNo13_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no13.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍13", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no13.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍13", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no13.setBackgroundResource(0)
+                        binding.tacoBallNo13.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍13", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count13 < 25){
+                                state13 = false
+                                binding.tacoBallNo13.setImageResource(R.drawable.taco_r1)
+
+                                if(count13 >= 35) {
+                                    state13 = false
+                                    binding.tacoBallNo13.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo13.setOnClickListener {
+                                        binding.tacoBallNo13.setImageResource(0)
+                                    }
+                                }
+                            } else if(count13 >= 25 && count13 < 35){
+                                state13 = true
+                                binding.tacoBallNo13.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo13.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo13.setImageResource(0)
+                                    binding.tacoDomaR5.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count >= 35) {
+                                    state13 = false
+                                    binding.tacoBallNo13.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo13.setOnClickListener {
+                                        binding.tacoBallNo13.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count13 >= 35){
+                                state13 = false
+                                binding.tacoBallNo13.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo13.setOnClickListener{
+                                    binding.tacoBallNo13.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state13 == sc_check){
+                            binding.tacoDomaR5.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR5.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state13:$state13")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo13Thread
+    inner class TacoNo13Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo13_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo13_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo13_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo13_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo14Handler
+    private val tacoNo14_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no14.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍14", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no14.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍14", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no14.setBackgroundResource(0)
+                        binding.tacoBallNo14.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍14", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count14 < 25){
+                                state14 = false
+                                binding.tacoBallNo14.setImageResource(R.drawable.taco_r1)
+
+                                if(count14 >= 35) {
+                                    state14 = false
+                                    binding.tacoBallNo14.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo14.setOnClickListener {
+                                        binding.tacoBallNo14.setImageResource(0)
+                                    }
+                                }
+                            } else if(count14 >= 25 && count14 < 35){
+                                state14 = true
+                                binding.tacoBallNo14.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo14.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo14.setImageResource(0)
+                                    binding.tacoDomaR6.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count14 >= 35) {
+                                    state14 = false
+                                    binding.tacoBallNo14.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo14.setOnClickListener {
+                                        binding.tacoBallNo14.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count14 >= 35){
+                                state14 = false
+                                binding.tacoBallNo14.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo14.setOnClickListener{
+                                    binding.tacoBallNo14.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state14 == sc_check){
+                            binding.tacoDomaR6.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR6.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state14:$state14")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo14Thread
+    inner class TacoNo14Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo14_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo14_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo14_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo14_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo15Handler
+    private val tacoNo15_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no15.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍15", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no15.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍15", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no15.setBackgroundResource(0)
+                        binding.tacoBallNo15.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍15", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count15 < 25){
+                                state15 = false
+                                binding.tacoBallNo15.setImageResource(R.drawable.taco_r1)
+
+                                if(count15 >= 35) {
+                                    state15 = false
+                                    binding.tacoBallNo15.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo15.setOnClickListener {
+                                        binding.tacoBallNo15.setImageResource(0)
+                                    }
+                                }
+                            } else if(count15 >= 25 && count15 < 35){
+                                state15 = true
+                                binding.tacoBallNo15.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo15.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo15.setImageResource(0)
+                                    binding.tacoDomaR7.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count15 >= 35) {
+                                    state15 = false
+                                    binding.tacoBallNo15.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo15.setOnClickListener {
+                                        binding.tacoBallNo15.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count15 >= 35){
+                                state15 = false
+                                binding.tacoBallNo15.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo15.setOnClickListener{
+                                    binding.tacoBallNo15.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state15 == sc_check){
+                            binding.tacoDomaR7.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR7.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state15:$state15")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo15Thread
+    inner class TacoNo15Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo15_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo15_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo15_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo15_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
+    //TacoNo16Handler
+    private val tacoNo16_handler = object: Handler(Looper.getMainLooper()){
+        override fun handleMessage(msg: Message) {
+            when(msg.what){
+                NO_1 -> {
+                    if(state == 1){
+                        binding.no16.setBackgroundResource(R.drawable.taco_state_1)
+                        Log.d("구멍16", "주전자 선택됨")
+                    }
+                }
+                NO_2 -> {
+                    if(state == 2){
+                        binding.no16.setBackgroundResource(R.drawable.taco_state_2)
+                        Log.d("구멍16", "문어 선택됨")
+                    }
+                }
+                NO_3 -> {
+                    if(state==3){
+                        th_click = true
+                    }
+                    if(state == 3 && th_click == true){
+                        binding.no16.setBackgroundResource(0)
+                        binding.tacoBallNo16.setImageResource(R.drawable.taco_r1)
+                        Log.d("구멍16", "스틱 선택됨")
+
+                        if(tb_click == true){
+                            //익었을 때
+                            if(count16 < 25){
+                                state16 = false
+                                binding.tacoBallNo16.setImageResource(R.drawable.taco_r1)
+
+                                if(count16 >= 35) {
+                                    state16 = false
+                                    binding.tacoBallNo16.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo16.setOnClickListener {
+                                        binding.tacoBallNo16.setImageResource(0)
+                                    }
+                                }
+                            } else if(count16 >= 25 && count16 < 35){
+                                state16 = true
+                                binding.tacoBallNo16.setImageResource(R.drawable.taco_r2)
+                                binding.tacoBallNo16.setOnClickListener{
+                                    //익은 타코 도마로 이동
+                                    binding.tacoBallNo16.setImageResource(0)
+                                    binding.tacoDomaR8.setImageResource(R.drawable.taco_r2)
+                                }
+                                if(count16 >= 35) {
+                                    state16 = false
+                                    binding.tacoBallNo16.setImageResource(R.drawable.taco_r4)
+                                    binding.tacoBallNo16.setOnClickListener {
+                                        binding.tacoBallNo16.setImageResource(0)
+                                    }
+                                }
+                            }
+                            //탔을 때
+                            else if (count16 >= 35){
+                                state16 = false
+                                binding.tacoBallNo16.setImageResource(R.drawable.taco_r4)
+                                binding.tacoBallNo16.setOnClickListener{
+                                    binding.tacoBallNo16.setImageResource(0)
+                                }
+                            }
+                        }
+                    }
+                }
+                NO_4 -> {
+                    if(state==4){
+                        sc_check = true
+                        if(state16 == sc_check){
+                            binding.tacoDomaR8.setOnClickListener{
+                                //타코 알에 소스 바르기
+                                binding.tacoDomaR8.setImageResource(R.drawable.taco_r3)
+                            }
+                            Log.d("소스바르기", "state16:$state16")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //TacoNo16Thread
+    inner class TacoNo16Thread : Thread() {
+        var run = true
+        override fun run() {
+            while (run){
+                val msg = Message()
+                msg.what = NO_1
+                tacoNo16_handler.sendMessage(msg)
+
+                val msg2 = Message()
+                msg2.what = NO_2
+                tacoNo16_handler.sendMessage(msg2)
+
+                val msg3 = Message()
+                msg3.what = NO_3
+                tacoNo16_handler.sendMessage(msg3)
+
+                val msg4 = Message()
+                msg4.what = NO_4
+                tacoNo16_handler.sendMessage(msg4)
+
+                run = false
+            }
+            super.run()
+        }
+    }
+
 /*--------------------------------------------------------------------------------------------------*/
     //[Score]
     //ScoreHandler
@@ -1261,6 +2439,30 @@ class TacoMain : AppCompatActivity() {
                     if(state8==true){
                         score += 20
                     }
+                    if(state9==true){
+                        score += 20
+                    }
+                    if(state10==true){
+                        score += 20
+                    }
+                    if(state11==true){
+                        score += 20
+                    }
+                    if(state12==true){
+                        score += 20
+                    }
+                    if(state13==true){
+                        score += 20
+                    }
+                    if(state14==true){
+                        score += 20
+                    }
+                    if(state15==true){
+                        score += 20
+                    }
+                    if(state16==true){
+                        score += 20
+                    }
                 }
                 NO_5 -> {
                     if(state==5){
@@ -1273,6 +2475,7 @@ class TacoMain : AppCompatActivity() {
                         binding.tacoDomaR7.setImageResource(0)
                         binding.tacoDomaR8.setImageResource(0)
                         binding.tacoScore.text = score.toString()
+                        binding.tacoMan.setImageResource(R.drawable.taco_man_happy)
                     }
                 }
             }
