@@ -28,4 +28,17 @@
     <color name="taco_desk_bottom">#F09E38</color>
     <color name="taco_game_over">#EB3223</color>
 
+    <color name="interpark_gray1">#CDCDCD</color>
+    <color name="interpark_gray2">#929292</color>
+    <color name="interpark_gray3">#EBECEE</color>
+    <color name="interpark_gray4">#F8F8F8</color>
+    <color name="interpark_main">#E03A3E</color>
+    <color name="interpark_black">#353535</color>
+    <color name="interpark_home_recommend_book">#F2EDDD</color>
+    <color name="interpark_home_hot_keyword">#DB951C</color>
+    <color name="interpark_green">#43A396</color>
+    <color name="interpark_red">#E13A3E</color>
+    <color name="interpark_blue">#39A9CF</color>
+    <color name="interpark_gray5">#333333</color>
+
 </resources>

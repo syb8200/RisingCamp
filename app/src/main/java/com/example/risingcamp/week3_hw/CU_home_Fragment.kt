@@ -58,7 +58,7 @@ class CU_home_Fragment: Fragment() {
         }
 
         //왼쪽 카테고리 버튼
-        val cu_top_category = view.findViewById<ImageView>(R.id.cu_top_category)
+        val cu_top_category = view.findViewById<ImageView>(R.id.interpark_home_logo)
         cu_top_category.setOnClickListener{ view->
             val intent = Intent(activity, CU_setting::class.java)
             startActivity(intent)

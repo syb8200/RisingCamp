@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/interpark_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/interpark_book_back_btn"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/interpark_book_back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/interpark_book_home_btn"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/interpark_bottom_home"
+            app:layout_constraintStart_toEndOf="@+id/interpark_book_back_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/interpark_home_search_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:drawableRight="@drawable/interpark_home_search_resize"
+            android:hint="유시민 작가의 추천 책"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/interpark_book_home_btn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interpark_app_bar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/interpark_book_cover_img"
+                android:layout_width="220dp"
+                android:layout_height="330dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/interpark_gray4"
+                android:elevation="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/interpark_book_sub_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_cover_img">
+
+                <LinearLayout
+                    android:id="@+id/interpark_book_sub_menu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/interpark_book_sub_1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="미리보기"
+                        android:textColor="@color/interpark_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interpark_book_sub_menu_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/interpark_book_sub_2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="카드책"
+                        android:textColor="@color/interpark_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interpark_book_sub_menu_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/interpark_book_sub_3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="좋아요"
+                        android:textColor="@color/interpark_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/interpark_book_sub_menu_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/interpark_book_sub_4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="공유하기"
+                        android:textColor="@color/interpark_black"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/interpark_book_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_sub_menu">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="베스트셀러"
+                    android:textSize="14sp"
+                    android:textColor="@color/interpark_green"
+                    android:background="@drawable/interpark_book_bestseller_btn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="소득공제"
+                    android:textColor="@color/interpark_gray2"
+                    android:textSize="14sp"
+                    android:background="@drawable/interpark_book_soduek_btn"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/interpark_book_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:paddingRight="15dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="책 이름"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_category" />
+
+            <LinearLayout
+                android:id="@+id/interpark_book_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_title">
+
+                <TextView
+                    android:id="@+id/interpark_book_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="작가 이름"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center"
+                    android:background="@color/interpark_gray2"/>
+
+                <TextView
+                    android:id="@+id/interpark_book_publish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="출판사"
+                    android:textSize="16sp"
+                    android:textColor="@color/interpark_black"
+                    android:textStyle="normal"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center"
+                    android:background="@color/interpark_gray2"/>
+
+                <TextView
+                    android:id="@+id/interpark_book_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="출판일"
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/interpark_book_detail_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_detail">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="주간"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/interpark_book_week_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="등수"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="위"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@color/interpark_gray2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="판매상태"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/interpark_book_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="상태"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:background="@color/interpark_gray2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="리뷰 개수"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/interpark_book_count_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="숫자"
+                    android:textColor="@color/interpark_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/interpark_book_detail_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_detail_2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:src="@drawable/interpark_book_stars"/>
+
+                <TextView
+                    android:id="@+id/interpark_book_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:text="평점"
+                    android:textStyle="normal"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/interpark_book_line_1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/cu_line"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_detail_3"/>
+
+            <TextView
+                android:id="@+id/interpark_book_third_menu_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="15dp"
+                android:text="할인가"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_1" />
+
+            <TextView
+                android:id="@+id/interpark_book_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="45dp"
+                android:text="할인 후 가격"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_1"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_1" />
+
+            <TextView
+                android:id="@+id/interpark_book_not_discount_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:layout_marginLeft="10dp"
+                android:text="할인 전 가격"
+                android:textStyle="normal"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_discount_price"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_1"/>
+
+            <TextView
+                android:id="@+id/interpark_book_discount_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:text="할인율"
+                android:textSize="16sp"
+                android:textColor="@color/interpark_home_hot_keyword"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_not_discount_price"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="% ↓"
+                android:textStyle="bold"
+                android:textColor="@color/interpark_home_hot_keyword"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_discount_rate"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_1"/>
+
+            <TextView
+                android:id="@+id/interpark_book_third_menu_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="포인트"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_third_menu_1" />
+
+            <TextView
+                android:id="@+id/interpark_book_mileage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="45dp"
+                android:text="포인트"
+                android:textColor="@color/interpark_blue"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_1"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_discount_price" />
+
+            <TextView
+                android:id="@+id/interpark_book_mileage_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="P"
+                android:textColor="@color/interpark_blue"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_mileage"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_discount_price" />
+
+            <TextView
+                android:id="@+id/interpark_book_third_menu_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:text="적립혜택"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_third_menu_2" />
+
+            <TextView
+                android:id="@+id/interpark_book_benefit_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="우수회원 추가적립"
+                android:textColor="@color/interpark_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_3"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_mileage" />
+
+            <TextView
+                android:id="@+id/interpark_book_benefit_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="5만원 이상 주문 시 추가적립"
+                android:textColor="@color/interpark_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_3"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_benefit_1" />
+
+            <TextView
+                android:id="@+id/interpark_book_third_menu_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:layout_marginLeft="15dp"
+                android:text="결제혜택"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_third_menu_3" />
+
+            <TextView
+                android:id="@+id/interpark_book_benefit_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="카드/간편결제 확인"
+                android:textColor="@color/interpark_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_4"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_benefit_2" />
+
+            <View
+                android:id="@+id/interpark_book_line_2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/cu_line"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_benefit_3"/>
+
+            <TextView
+                android:id="@+id/interpark_book_third_menu_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:text="결제혜택"
+                android:textColor="@color/interpark_gray2"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_2" />
+
+            <TextView
+                android:id="@+id/interpark_book_benefit_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:text="무료배송"
+                android:textColor="@color/interpark_black"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/interpark_book_third_menu_5"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_2" />
+
+            <View
+                android:id="@+id/interpark_book_line_3"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/cu_line"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_benefit_4"/>
+
+            <ImageView
+                android:id="@+id/interpark_book_banner_1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/interpark_book_banner_1"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_3"/>
+
+            <View
+                android:id="@+id/interpark_book_line_4"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/cu_line"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_banner_1"/>
+
+            <LinearLayout
+                android:id="@+id/interpark_book_mid_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:paddingVertical="5dp"
+                    android:gravity="center"
+                    android:text="책정보"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:background="@drawable/interpark_book_book_info_btn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingVertical="5dp"
+                    android:gravity="center"
+                    android:text="추천도서"
+                    android:textSize="14sp"
+                    android:textColor="@color/interpark_gray2"
+                    android:textStyle="bold"
+                    android:background="@drawable/interpark_book_recommend_book_btn"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.9"
+                    android:paddingVertical="5dp"
+                    android:gravity="center"
+                    android:text="리뷰/한줄평"
+                    android:textSize="14sp"
+                    android:textColor="@color/interpark_gray2"
+                    android:textStyle="bold"
+                    android:background="@drawable/interpark_book_review_btn"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/interpark_book_intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:text="책소개"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_mid_btn" />
+
+            <TextView
+                android:id="@+id/interpark_book_intro_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="5dp"
+                android:text="책 소개 내용"
+                android:textSize="15sp"
+                android:textColor="@color/interpark_black"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_intro" />
+
+            <View
+                android:id="@+id/interpark_book_line_5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/cu_line"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_intro_detail"/>
+
+            <TextView
+                android:id="@+id/interpark_book_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:text="배송/환불/교환"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_line_5" />
+
+            <TextView
+                android:id="@+id/interpark_book_delivery_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="20dp"
+                android:lineSpacingExtra="5dp"
+                android:gravity="start"
+                android:text="• 교보문고 상품은 택배로 배송되며, 출고완료 1-2일\n  내 상품을 받아 보실 수 있습니다.\n• 출고가능 시간이 서로 다른 상품을 함께 주문할 경우
+                \n  출고가능 시간이 가장 긴 상품을 기준으로 배송됩니다.
+\n• 군부대, 교도소 등 특정기관은 우체국 택배만 배송 가\n  능합니다.
+\n• 배송비는 업체 배송비 정책에 따릅니다.\n  ①도서 구매 시, 1만 원 이상 무료, 1만원 미만 2천원
+\n  ②상품별 배송비가 있는 경우, 상품별 배송비 정책 적용"
+                android:textColor="@color/interpark_black"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_delivery" />
+
+            <View
+                android:id="@+id/interpark_book_line_6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/interpark_gray1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_delivery_detail" />
+
+            <LinearLayout
+                android:id="@+id/interpark_book_bottom_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_line_6">
+
+                <TextView
+                    android:id="@+id/interpark_home_bottom_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="로그인"
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_gray2"
+                    android:textSize="13sp"/>
+
+                <View
+                    android:id="@+id/interpark_home_line8"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginVertical="10dp"
+                    android:background="@color/interpark_gray1"/>
+
+                <TextView
+                    android:id="@+id/interpark_home_bottom_pc_ver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="PC버전"
+                    android:textSize="13sp"
+                    android:textColor="@color/interpark_gray2"
+                    android:textStyle="normal"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/interpark_book_line_7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/interpark_gray1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_bottom_btn" />
+
+            <LinearLayout
+                android:id="@+id/interpark_book_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interpark_book_line_7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:text="(주)인터파크 대표이사 이기형, 강동화"
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_gray1"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="서울시 강남구 삼성로 512 삼성동빌딩 10층\n사업자번호 220-81-47821 통신판매업신고 2015-서울강남-01050\n고객센터 1577-2555\nhelpdesk@interpark.com"
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_gray1"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="이용약관 | 개인정보 처리방침 | 사업자정보확인\n구매안전 서비스 | 안전결제시스템"
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_gray1"
+                    android:textSize="11sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="인터파크도서에 등록된 오픈마켓 상품은 그 내용과 책임이 모두 판매자에게\n있으며, 인터파크 도서는 해당 상품과 내용에 대해 책임지지 않습니다.\nCopyright INTERPARK All rights reserved."
+                    android:textStyle="normal"
+                    android:textColor="@color/interpark_gray1"
+                    android:textSize="11sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/interpark_book_footer">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/interpark_book_bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="15dp"
+            android:background="@drawable/interpark_book_bottom_btn"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/interpark_book_bottom_btn_txt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="1dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/interpark_book_bottom_space">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="북카트"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="구매하기"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

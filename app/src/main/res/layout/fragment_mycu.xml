@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/cu_top_category"
+            android:id="@+id/interpark_home_logo"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="8dp"

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.risingcamp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RisingCamp">
 
-        <activity android:name=".week4_hw.TacoFirst"
+        <activity android:name=".week5_hw.Interpark_splash"
                   android:theme="@style/Theme.AppCompat.Light.NoActionBar"
                   android:exported="true">
             <intent-filter>
@@ -48,7 +50,12 @@
         <activity android:name=".week4_pt.MainActivity2"></activity>
 
         <activity android:name=".week4_hw.TacoMain" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week4_hw.TacoFirst" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
+        <activity android:name=".week5_pt.MainActivity"></activity>
+
+        <activity android:name=".week5_hw.Interpark_bottom_nav" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".week5_hw.Interpark_book" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
     </application>
 

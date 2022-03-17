@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/interpark_home"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:checked="false"
+        android:icon="@drawable/interpark_bottom_home"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/interpark_category"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:checked="false"
+        android:icon="@drawable/interpark_bottom_category"
+        android:title="Category" />
+
+    <item
+        android:id="@+id/interpark_mypage"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:checked="false"
+        android:icon="@drawable/interpark_bottom_mypage"
+        android:title="My Page" />
+
+    <item
+        android:id="@+id/interpark_recent"
+        android:enabled="true"
+        app:showAsAction="ifRoom"
+        android:checked="false"
+        android:icon="@drawable/interpark_bottom_recent"
+        android:title="Recent" />
+
+</menu>

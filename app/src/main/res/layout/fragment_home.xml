@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/cu_top_category"
+            android:id="@+id/interpark_home_logo"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="8dp"
@@ -33,7 +33,7 @@
             android:layout_marginLeft="8dp"
             android:src="@drawable/cu_top_icon_2"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/cu_top_category"
+            app:layout_constraintStart_toEndOf="@+id/interpark_home_logo"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
