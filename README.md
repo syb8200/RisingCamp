@@ -32,4 +32,4 @@
 | 4주차 | 02.28 ~ 03.06 | Multi-Thread | Multi Thread를 활용한 앱 만들기 (문어빵 만들기 게임) |
 | 5주차 | 03.07 ~ 03.13 | Network Intro & API | JSON 파싱 + API 활용하여 앱 만들기 (인터파크 도서) |
 | 6주차 | 03.14 ~ 03.20 | Token & Restful | 5주차 과제 템플릿에 옮기기 |
-| 7주차 | 03.21 ~ 03.27 | Rising Test |  |
+| 7주차 | 03.21 ~ 03.27 | Rising Test | 번개장터  |
